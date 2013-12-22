@@ -16,11 +16,7 @@ app.get("/", function (req, res) {
   request({url:  SPARK+"/v1/devices/"+DEVICE_ID+"/status", method: "POST", form: {access_token: ACCESS_TOKEN}}, function (e, r, body) {
     body = (JSON.parse(body));
     console.log(body);
-    if (body.return_value == 1) {
-      res.send("Lights ON");
-    } else {
-      res.send("Lights OFF");
-    }
+    res.send("<html><head><title>Voodoo Lights</title><link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'></head><body>Lights "+(body.return_value == 1 ? "ON" : "OFF")+"<br/><br/><br/><br/><a href='/toggle'>*</a></body></html>");
   });
 })
 
