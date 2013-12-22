@@ -7,7 +7,7 @@ var express = require('express');
 var app = express();
 
 app.get('/toggle', function(req, res){
-  request.post( SPARK+"/v1/devices/"+DEVICE_ID+"/toggle", {access_token: ACCESS_TOKEN}}, function (e, r, body) {
+  request.post( SPARK+"/v1/devices/"+DEVICE_ID+"/toggle", {access_token: ACCESS_TOKEN}, function (e, r, body) {
     console.log(body);
     res.send("OK");
   });
