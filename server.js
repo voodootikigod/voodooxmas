@@ -8,7 +8,8 @@ var app = express();
 
 app.get('/toggle', function(req, res){
   request({url:  SPARK+"/v1/devices/"+DEVICE_ID+"/toggle", method: "POST", form: {access_token: ACCESS_TOKEN}}, function (e, r, body) {
-    if (body.return_value) {
+    console.log(body.return_value);
+    if (body.return_value == 1) {
       res.send("Lights ON");
     } else {
       res.send("Lights OFF");
