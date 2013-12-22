@@ -17,4 +17,15 @@ app.get('/toggle', function(req, res){
   });
 });
 
+app.get("/", function (req, res) {
+  request({url:  SPARK+"/v1/devices/"+DEVICE_ID+"/status", method: "POST", form: {access_token: ACCESS_TOKEN}}, function (e, r, body) {
+    body = (JSON.parse(body));
+    if (body.return_value == 1) {
+      res.send("Lights ON");
+    } else {
+      res.send("Lights OFF");
+    }
+  });
+})
+
 app.listen(process.env.PORT || 3000);
