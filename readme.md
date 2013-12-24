@@ -13,7 +13,7 @@ Connect up your circuit, depending on your choice, in the following manner:
 
 #### LED Circuit
 
-Connect the LED positive lead, the longer one, to the D0 pin by way of the appropriate resistor. Connect the LED negative lead, the shorter one, to any of the GND or ground pins.
+Connect the LED positive lead, the longer one, to the D0 pin by way of the appropriate resistor. Connect the LED negative lead, the shorter one, to any of the GND or ground pins. Use this [awesome visual guide](http://docs.spark.io/#/examples/blink-an-led) from Spark Core.
 
 
 #### PowerSwitch Tail 2 Circuit
@@ -40,7 +40,7 @@ heroku config:set DEVICE_ID="that-value-you-copied-earlier-labeled-Device-ID"
 heroku config:set ACCESS_TOKEN="that-value-you-copied-earlier-labeled-Access-Token"
 </pre>
 
-And that is it! when you ran the `heroku create` command it provided you with a URL, that URL is how you access your light(s). There will be a very small asterick (*) on the screen, when you click it, it will toggle your lights and redirect you back to the current status. 
+And that is it! when you ran the `heroku create` command it provided you with a URL, that URL is how you access your light(s). There will be a very small asterick (*) on the screen, when you click it, it will toggle your lights and redirect you back to the current status.
 
 ###Congrats
 You just made an end-to-end Internet of Things thing -- now go make more!
